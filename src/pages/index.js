@@ -1,3 +1,11 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
-export default () => <div>Hello Frontend Masters!</div>;
+const Index = () => (
+  <div>
+    <h1>New Things About New Things</h1>
+    <Link to="/about/">Learn more about Us!</Link>
+  </div>
+);
+
+export default Index;
