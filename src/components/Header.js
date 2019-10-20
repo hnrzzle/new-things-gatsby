@@ -2,11 +2,13 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
+import { SITENAME, PODCAST, STYLE_CONSTS } from '../constants';
+import HeaderPromoLink from './HeaderPromoLink';
 
 const NavLink = styled(Link)`
-  color: #222;
+  color: ${STYLE_CONSTS.main_white};
   font-size: 1rem;
-  font-weight: ${props => props.fontWeight || 'normal'};
+  font-weight: ${props => props.fontWeight || '600'};
   line-height: 1;
   margin: 0 0.5rem 0 0;
   padding: 0.25rem;
@@ -22,7 +24,7 @@ const NavLink = styled(Link)`
 const Header = () => (
   <header
     css={css`
-      background: #eee;
+      background-color: ${STYLE_CONSTS.main_black};
       border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
@@ -30,7 +32,7 @@ const Header = () => (
     `}
   >
     <NavLink to="/" fontWeight="bold">
-      <h1>New Things About New Things</h1>
+      <h1>{SITENAME}</h1>
     </NavLink>
     <nav
       css={css`
@@ -45,15 +47,18 @@ const Header = () => (
       <NavLink to="/about/" activeClassName="current-page">
         About
       </NavLink>
-      <NavLink to="/podcast/" activeClassName="current-page">
-        Podcast
-      </NavLink>
       <NavLink to="/sports/" activeClassName="current-page">
         Sports
       </NavLink>
       <NavLink to="/pop-culture/" activeClassName="current-page">
         Pop Culture
       </NavLink>
+      <HeaderPromoLink
+        link={`/podcast/${PODCAST.POD_SLUG}`}
+        activeClassName="current-page"
+      >
+        The Podcast
+      </HeaderPromoLink>
     </nav>
   </header>
 );

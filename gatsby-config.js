@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'New Things About New Things',
+    title: 'The Rotation',
     description: 'A blog dedicated to new and great things',
   },
   plugins: [
