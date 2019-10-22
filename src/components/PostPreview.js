@@ -10,14 +10,15 @@ const style = css`
     margin-bottom: 0.5rem;
   }
   .author-name {
-    display: block;
     margin-top: 0rem;
     font-weight: 600;
     font-size: 0.8rem;
+    margin-right: 0.3rem;
   }
   .date {
     font-style: italic;
     font-size: 0.8rem;
+    margin-left: 0.3rem;
   } 
 `;
 
@@ -25,8 +26,7 @@ const PostPreview = ({ title, author, children, date, slug }) => (
   <article css={style}>
     <Link to={`/${slug}`}>
       <h2>{title}</h2>
-      <span className="author-name">{author}</span>
-      <span className="date">{date}</span>
+      <span className="author-name">{author}</span>|<span className="date">{date}</span>
     </Link>
     {children}
   </article>
