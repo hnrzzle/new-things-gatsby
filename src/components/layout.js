@@ -1,6 +1,7 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
 import Header from './Header';
+import { STYLE_CONSTS } from '../constants';
 
 const Layout = ({ children }) => (
   <>
@@ -46,6 +47,9 @@ const Layout = ({ children }) => (
         li {
           margin-top: 0.25rem;
         }
+        a {
+          text-decoration: none;
+        }
       `}
     />
     <Header />
@@ -54,6 +58,14 @@ const Layout = ({ children }) => (
         margin: 2rem auto;
         max-width: 90vw;
         width: 900px;
+        a span {
+        color: #5f50aa;
+        }
+        a h2 {
+          :hover {
+            color: #5f50aa
+          }
+        }
       `}
     >
       {children}

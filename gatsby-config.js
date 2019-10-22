@@ -85,6 +85,26 @@ module.exports = {
         normalizer: function({ entities }) {
           return entities;
         },
+
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Oswald`,
+            subsets: [`latin`],
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`],
+          },
+          {
+            family: `Righteous`,
+            variants: [`400`, `700`],
+          },
+        ],
       },
     },
   ],

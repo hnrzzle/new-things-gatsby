@@ -19,6 +19,10 @@ const NavLink = styled(Link)`
   &:last-of-type {
     margin-right: 0;
   }
+  h1 {
+    color: ${STYLE_CONSTS.main_white};
+    font-family: "Righteous"
+  }
 `;
 
 const Header = () => (

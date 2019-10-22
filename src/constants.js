@@ -10,4 +10,5 @@ export const STYLE_CONSTS = {
   main_white: '#fff',
   accent_color: '#5187ff',
   grey: '#adadad',
+  black_reading_text: '#555',
 };
