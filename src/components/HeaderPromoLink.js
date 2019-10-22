@@ -6,15 +6,16 @@ import { SITENAME, PODCAST, STYLE_CONSTS } from '../constants';
 
 const PromoLink = styled(Link)`
   color: ${STYLE_CONSTS.main_white};
-  background-color: ${STYLE_CONSTS.accent_color};
+  /* background-color: ${STYLE_CONSTS.accent_color};
   border-radius: 5px;
-  border: 2px solid ${STYLE_CONSTS.grey};
+  border: 2px solid ${STYLE_CONSTS.grey}; */
   font-size: 1rem;
   font-weight: ${props => props.fontWeight || '500'};
   line-height: 1;
   margin: 0 0.5rem 0 0;
   padding: 0.5rem;
   text-decoration: none;
+  border: 2px solid #5f50aa;
   &.current-page {
     border-bottom: 2px solid #222;
   }

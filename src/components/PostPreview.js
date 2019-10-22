@@ -25,7 +25,7 @@ const style = css`
 const PostPreview = ({ title, author, children, date, slug }) => (
   <article css={style}>
     <Link to={`/${slug}`}>
-      <h2>{title}</h2>
+      <h2 dangerouslySetInnerHTML={{ __html: title }} />
       <span className="author-name">{author}</span>|<span className="date">{date}</span>
     </Link>
     {children}

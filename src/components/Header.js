@@ -32,7 +32,9 @@ const Header = () => (
       border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
-      padding: 1.5rem calc((100vw - 900px - 0.5rem) / 2);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.2rem;
+      padding: 1.5rem calc((100vw - 1000px - 0.5rem) / 2);
     `}
   >
     <NavLink to="/" fontWeight="bold">
@@ -51,12 +53,12 @@ const Header = () => (
       <NavLink to="/about/" activeClassName="current-page">
         About
       </NavLink>
-      <NavLink to="/sports/" activeClassName="current-page">
+      {/* <NavLink to="/sports/" activeClassName="current-page">
         Sports
       </NavLink>
       <NavLink to="/pop-culture/" activeClassName="current-page">
         Pop Culture
-      </NavLink>
+      </NavLink> */}
       <HeaderPromoLink
         link={`/podcast/${PODCAST.POD_SLUG}`}
         activeClassName="current-page"

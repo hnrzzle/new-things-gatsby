@@ -1,12 +1,21 @@
 import React from 'react';
+import { css } from '@emotion/core';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { SITENAME } from '../constants';
 import PostPreview from '../components/PostPreview';
 
+const styles = css`
+  color: #5f50aa;
+  border-bottom: 1px solid #aeacb7;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+`;
+
 const Index = ({ data }) => (
   <Layout>
-    <h1>{SITENAME}</h1>
+    <h2 css={styles}>New Things</h2>
     {data.allWordpressPost.edges.map(({ node }) => {
       const { id, slug, title, excerpt, date, author, categories } = node;
 
@@ -18,7 +27,12 @@ const Index = ({ data }) => (
           date={date}
           slug={slug}
         >
-          <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+          <div
+            css={css`
+              margin: 0.4rem 0 0 0;
+              font-family: "Lato", sans-serif;
+            `}
+            dangerouslySetInnerHTML={{ __html: excerpt }} />
         </PostPreview>
       );
     })}
