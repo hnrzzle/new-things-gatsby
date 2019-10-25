@@ -20,7 +20,7 @@ class PostTemplate extends Component {
           <div
             css={css`
               margin: 1.4rem 0 0 0;
-              font-family: "Lato", sans-serif;
+              font-family: 'Merriweather', serif;
             `}
             dangerouslySetInnerHTML={{ __html: content }} 
           />

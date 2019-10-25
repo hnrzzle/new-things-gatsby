@@ -22,7 +22,7 @@ const Layout = ({ children }) => (
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
             'Segoe UI Symbol';
-          font-size: 18px;
+          font-size: 16px;
           line-height: 1.4;
           /* remove margin for the main div that Gatsby mounts into */
           > div {
@@ -49,6 +49,9 @@ const Layout = ({ children }) => (
         }
         a {
           text-decoration: none;
+        }
+        p {
+          line-height: 1.8;
         }
       `}
     />

@@ -34,7 +34,7 @@ const TheBenchSquad = ({ data }) => (
             <div
               css={css`
                 margin: 0.4rem 0 0 0;
-                font-family: "Lato", sans-serif;
+                font-family: 'Merriweather', serif;
               `}
               dangerouslySetInnerHTML={{ __html: excerpt }} 
             />
