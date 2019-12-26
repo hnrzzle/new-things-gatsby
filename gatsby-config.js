@@ -2,6 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'The Rotation',
     description: 'A blog dedicated to new and great things',
+    twitter: 'https://www.twitter.com/',
+    siteUrl: 'https://therotation.us/',
   },
   plugins: [
     'gatsby-plugin-emotion',

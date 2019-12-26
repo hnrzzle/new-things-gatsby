@@ -1,10 +1,12 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
 import Header from './Header';
+import SiteMetadata from './site-metadata';
 import { STYLE_CONSTS } from '../constants';
 
-const Layout = ({ children }) => (
+const Layout = ({ id, slug, children }) => (
   <>
+    <SiteMetadata />
     <Global
       styles={css`
         * {

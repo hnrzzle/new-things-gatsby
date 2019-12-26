@@ -9,7 +9,7 @@ class PostTemplate extends Component {
     const { id, slug, title, content, date, author, categories } = this.props.data.wordpressPost;
 
     return (
-      <Layout>
+      <Layout id={id} slug={slug}>
         <PostPreview
           key={id}
           title={title}
