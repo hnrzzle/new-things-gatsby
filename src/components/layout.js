@@ -9,9 +9,11 @@ import { STYLE_CONSTS } from '../constants';
 const Layout = ({ id, slug, title, children }) => (
   <>
     <SiteMetadata />
-    <Helmet>
-      <title>{he.decode(`${title}`)}</title>
-    </Helmet>
+    {title ? (
+      <Helmet>
+        <title>{he.decode(`${title}`)}</title>
+      </Helmet>
+    ) : ''}
     <Global
       styles={css`
         * {
