@@ -1,6 +1,7 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
 import { Helmet } from 'react-helmet';
+import he from 'he';
 import Header from './Header';
 import SiteMetadata from './site-metadata';
 import { STYLE_CONSTS } from '../constants';
@@ -9,7 +10,7 @@ const Layout = ({ id, slug, title, children }) => (
   <>
     <SiteMetadata />
     <Helmet>
-      <title>{title}</title>
+      <title>{he.decode(`${title}`)}</title>
     </Helmet>
     <Global
       styles={css`
@@ -81,5 +82,6 @@ const Layout = ({ id, slug, title, children }) => (
     </main>
   </>
 );
+
 
 export default Layout;
