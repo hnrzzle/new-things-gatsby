@@ -9,6 +9,7 @@ export const STYLE_CONSTS = {
   black_text: '#191919',
   main_white: '#fff',
   accent_color: '#5187ff',
+  main_purp: '#5f50aa',
   grey: '#adadad',
   black_reading_text: '#555',
 };
