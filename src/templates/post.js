@@ -8,10 +8,14 @@ import { STYLE_CONSTS } from '../constants';
 
 class PostTemplate extends Component {
   render() {
-    const { id, slug, title, content, date, author, categories } = this.props.data.wordpressPost;
+    const { id, slug, title, excerpt, content, date, author, categories } = this.props.data.wordpressPost;
 
     return (
-      <Layout id={id} slug={slug} title={title} path="post">
+      <Layout id={id} slug={slug} title={title} path="post" excerpt={excerpt}>
+        <Helmet>
+          <meta property="og:description" content={excerpt} />
+          {/* <meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" /> */}
+        </Helmet>
         <PostPreview
           key={id}
           title={title}
