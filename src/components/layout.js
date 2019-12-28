@@ -1,10 +1,16 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
+import { Helmet } from 'react-helmet';
 import Header from './Header';
+import SiteMetadata from './site-metadata';
 import { STYLE_CONSTS } from '../constants';
 
-const Layout = ({ children }) => (
+const Layout = ({ id, slug, title, children }) => (
   <>
+    <SiteMetadata />
+    <Helmet>
+      <title>{title}</title>
+    </Helmet>
     <Global
       styles={css`
         * {
